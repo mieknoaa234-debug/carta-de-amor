@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Alguien Especial ✨</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net"></script>
+    <style>
+        :root {
+            --rosa-pastel: #ffe5ec;
+            --rosa-fuerte: #ff8fa3;
+            --texto: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--rosa-pastel);
+            background-image: radial-gradient(rgba(255,143,163,0.2) 1px, transparent 1px);
+            background-size: 20px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--texto);
+        }
+
+        /* Reproductor de Música Superior */
+        .music-box {
+            width: 90%;
+            max-width: 400px;
+            background: white;
+            padding: 15px;
+            border-radius: 50px;
+            margin-top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        audio { width: 100%; height: 35px; }
+
+        /* Contenedor Principal (Escritorio y Móvil) */
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* Columnas de Fotos */
+        .photo-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+            min-width: 150px;
+            align-items: center;
+        }
+
+        .photo-frame {
+            background: white;
+            padding: 10px 10px 30px 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            transform: rotate(-2deg);
+            transition: 0.3s;
+            max-width: 180px;
+        }
+        .photo-frame:nth-child(even) { transform: rotate(3deg); }
+        .photo-frame img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
+
+        /* Mensaje Central */
+        .center-message {
+            flex: 2;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 40px;
+            border: 2px solid white;
+            box-shadow: 0 20px 40px rgba(255, 143, 163, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #ff4d6d;
+            margin: 0 0 20px 0;
+        }
+
+        .text-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* Adaptación a Móvil */
+        @media (max-width: 768px) {
+            .main-container { flex-direction: column; }
+            .photo-column { flex-direction: row; justify-content: center; }
+            .center-message { order: -1; width: 85%; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MÚSICA -->
+    <div class="music-box">
+        <p style="margin:0 0 5px 0; font-size: 0.8rem; font-weight: bold; color: var(--rosa-fuerte);">TE AMO MELISSA</p>
+        <audio controls loop autoplay>
+            <source src="Rauw Alejandro - Aquel Nap ZzZz (Audio Official).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="main-container">
+        <!-- LADO IZQUIERDO: 2 FOTOS -->
+        <div class="photo-column">
+            <div class="photo-frame">
+                <img src="A3C92578-1C35-4A03-8227-1CFEF580E530.jpg" alt="Recuerdo 1">
+            </div>
+            <div class="photo-frame">
+                <img src="9306A4DC-2B2D-43C2-B06C-E255BF7CEC40.jpg" alt="Recuerdo 2">
+            </div>
+        </div>
+
+        <!-- CENTRO: MENSAJE -->
+        <div class="center-message">
+            <h1>¡Feliz Cumpleaños!</h1>
+            <div class="text-body">
+                <p>Espero que este dia mi niña estes pasandola bien corazon no sabes cuanto te amo te deseo lo mejor siempre 🌟</p>
+                <p>Eres una persona increíble, no puedo describir todo lo que eres pero sobre todo para mi eres el amor de mi vida </p>
+                <p>¡Gracias por ser tú! ❤️<br>
+                No sabes cuanto te amo y se que no estamo en el mejor momento pero sobre todo quisiera que fueras tu estare aqui para esperandote siempre amor <br>
+                Con todo el amor y el deso en mi pecho quiero que logres todo lo que me dijiste te amo mi rayito de luz nunca lo olvides que siempre voy a estar para ti.</p>
+            </div>
+        </div>
+
+        <!-- LADO DERECHO: 2 FOTOS -->
+        <div class="photo-column">
+            <div class="photo-frame">
+                <img src="5D0A5CAC-9A19-4B3F-9079-EF45F444A56C-COLLAGE.jpg" alt="Recuerdo 3">
+            </div>
+            <div class="photo-frame">
+                <img src="940E205D-CEDF-4D6B-86D7-4DB8C865AF43.jpg" alt="Recuerdo 4">
+            </div>
+        </div>
+    </div>
+
+    <footer style="margin: 30px; font-family: 'Dancing Script'; font-size: 1.5rem; color: #ff8fa3;">
+        Con todo mi cariño...
+    </footer>
+
+    <script>
+        // Lanzar confeti automáticamente al cargar
+        window.onload = function() {
+            var end = Date.now() + (4 * 1000);
+            var colors = ['#ff8fa3', '#ffb3c1', '#ffffff'];
+
+            (function frame() {
+            confetti({
+                particleCount: 3,
+                angle: 60,
+                spread: 55,
+                origin: { x: 0 },
+                colors: colors
+            });
+            confetti({
+                particleCount: 3,
+                angle: 120,
+                spread: 55,
+                origin: { x: 1 },
+                colors: colors
+            });
+
+            if (Date.now() < end) {
+                requestAnimationFrame(frame);
+            }
+            }());
+        };
+    </script>
+</body>
+</html>
